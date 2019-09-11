@@ -1,0 +1,282 @@
+<!DOCTYPE html> 
+<!--
+    Name: Nicolas Graese
+    Date Created: 08/30/19  
+-->
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Menu</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+        
+        <link href="Styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+        
+        <style>
+			table, th, td
+			{
+				border: none;
+				padding: 5px 10px;
+			}
+			table
+			{
+				border: 1px solid Sienna;
+				width: 90%;
+				margin: auto;
+				margin-bottom: 25px;
+			}
+			tr
+			{
+				height: 50px;
+				padding: 5px 10px;
+			}
+			tr:nth-child(odd)
+			{
+				background-color: Cornsilk;
+			}
+			tr:nth-child(even)
+			{
+				background-color: Sienna;
+				color: Cornsilk;
+			}
+			th
+			{
+				text-align: center;
+				background-color: Cornsilk;
+				color: DarkSlateGray;
+			}
+			.tea
+			{
+				font-size: 1.1em;
+			}
+			.food
+			{
+				font-size: 1.1em;
+			}
+			.rightHead
+			{
+				text-align: left;
+			}
+			caption
+			{
+				caption-side: top;
+				text-decoration: underline;
+				font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+				font-size: 1.75em;
+				color: darkslategray;
+			}
+			.jumbotron
+			{
+				background-color: papayawhip;
+				color: darkslategray;
+			}
+        </style>
+        <noscript>
+        	<div style="color: red; font-weight: bold;">This page is best when used with Javascript!</div>
+        </noscript>
+    </head> 
+    
+    <body>
+        <header class="jumbotron">
+            <h1>Nicky G's Tasty Teas</h1>
+            <h4>New Location Opening!</h4>
+        </header>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    	
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<div class="container">
+        	<nav class="nav nav-tabs">
+        		<a href="RestaurantHome.html" class="nav-item nav-link"><svg class="home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"/></svg> Home</a>
+        		<a href="RestaurantMenu.html" class="nav-item nav-link current">Menu</a>
+        		<a href="RestaurantContact.html" class="nav-item nav-link">Contact Us</a>
+        		<div class="clear-float"></div>
+        	</nav>
+			<div class="space"></div>
+			<table>
+				<caption>Beverages</caption>
+				<div class="row">
+					<tr>
+						<div class="col-lg-4 col-md col-sm">
+							<th>Tea</th>
+						</div>
+						<div class="col-lg-6 col-md col-sm">
+							<th>Description</th>
+						</div>
+						<div class="col-lg-2 col-md col-sm">
+							<th>Price</th>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-4 col-md col-sm">
+							<td class="tea">Gunpowder Green Tea</td>
+						</div>
+						<div class="col-lg-6 col-md col-sm">
+							<td>A slightly bitter variant of green tea, with great calming properties.
+							Perfect for all occasions.</td>
+						</div>
+						<div class="col-lg-2 col-md col-sm">
+							<td>$2.99</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-4 col-md col-sm">
+							<td class="tea">English Breakfast Black Tea</td>
+						</div>
+						<div class="col-lg-6 col-md col-sm">
+							<td>Great tea to wake up to. Caffeine kick to start the day. Pairs
+							well with milk and sugar.</td>
+						</div>
+						<div class="col-lg-2 col-md col-sm">
+							<td>$2.49</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-4 col-md col-sm">
+							<td class="tea">Citrus Herbal Tea</td>
+						</div>
+						<div class="col-lg-6 col-md col-sm">
+							<td>Invigorating citrus taste to give a midday boost and lift your 
+							spirits. Fruity flavor especially great for a warm day.</td>
+						</div>
+						<div class="col-lg-2 col-md col-sm">
+							<td>$3.20</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-4 col-md col-sm">
+							<td class="tea">Dark Tea</td>
+						</div>
+						<div class="col-lg-6 col-md col-sm">
+							<td>Our dark tea is a post-fermented tea, giving a mellow flavor, with
+							a more favorable aftertaste. A classic from China.</td>
+						</div>
+						<div class="col-lg-2 col-md col-sm">
+							<td>$3.45</td>
+						</div>	
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-4 col-md col-sm">
+							<td class="tea">Silver Needle Yellow Tea</td>
+						</div>
+						<div class="col-lg-6 col-md col-sm">
+							<td>A rare and exquisite variety of tea, coming from China. Much more
+							mellow than similar Green teas.</td>
+						</div>
+						<div class="col-lg-2 col-md col-sm">
+							<td>$6.99</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-4 col-md col-sm">
+							<td class="tea">Cinnamon Chai Tea</td>
+						</div>
+						<div class="col-lg-6 col-md col-sm">
+							<td>A rich and flavorful chai, imbues energy and peace. Great way to 
+							start the day.</td>
+						</div>
+						<div class="col-lg-2 col-md col-sm">
+							<td>$2.99</td>
+						</div>
+					</tr>
+				</div>
+			</table>
+			
+			<table>
+				<caption>Foods</caption>
+				<div class="row">
+					<tr>
+						<div class="col-lg-9 col-md col-sm">
+							<th class="rightHead">Pastry/Cookie</th>
+						</div>
+						<div class="col-lg-3 col-md col-sm">
+							<th class="rightHead">Price</th>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-9 col-md col-sm">
+							<td class="food">Croissant</td>
+						</div>
+						<div class="col-lg-3 col-md col-sm">
+							<td>$1.99</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-9 col-md col-sm">
+							<td class="food">Pain Au Chocolat</td>
+						</div>
+						<div class="col-lg-3 col-md col-sm">
+							<td>$2.19</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-9 col-md col-sm">
+							<td class="food">Ginger Snaps (4)</td>
+						</div>
+						<div class="col-lg-3 col-md col-sm">
+							<td>$0.99</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-9 col-md col-sm">
+							<td class="food">Cinnamon Crunch Cookie</td>
+						</div>
+						<div class="col-lg-3 col-md col-sm">
+							<td>$2.99</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-9 col-md col-sm">
+							<td class="food">Lady Finger</td>
+						</div>
+						<div class="col-lg-3 col-md col-sm">
+							<td>$1.50</td>
+						</div>
+					</tr>
+				</div>
+				<div class="row">
+					<tr>
+						<div class="col-lg-9 col-md col-sm">
+							<td class="food">Pretzels</td>
+						</div>
+						<div class="col-lg-3 col-md col-sm">
+							<td>$1.15</td>
+						</div>
+					</tr>
+				</div>
+			</table>
+		</div>
+
+        <footer>
+        	<hr/>
+			<p>Address: 397 Main street, Altdorf MN, 55019</p>
+			<p>Telephone: (608) 358-5732</p>
+        </footer>
+    </body> 
+</html>

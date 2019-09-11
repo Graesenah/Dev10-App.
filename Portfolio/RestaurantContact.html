@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+<!--
+    Name: Nicolas Graese
+    Date Created: 08/30/19  
+-->
+<html lang="en"> 
+    <head> 
+    	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Contact Us</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+        
+        <link href="Styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+        
+        <style>
+        	.required
+        	{
+        		font-weight: bold;
+        	}
+        	form
+        	{
+        		text-align: center;
+        	}
+        	label
+        	{
+        		margin: 10px 0;
+        	}
+        	.submit
+        	{
+        		margin: 15px;
+        		padding: 2px 5px;
+        		color: Cornsilk;
+        		background-color: Sienna;
+        	}
+        	.submit:hover
+        	{
+        		background-color: DarkSlateGray;
+        		border: 2px solid Sienna;
+        	}
+        	.jumbotron
+			{
+				background-color: papayawhip;
+				color: darkslategray;
+			}
+			.note
+			{
+				text-align: center;
+				font-weight: bold;
+				font-size: .9em;
+				text-decoration: underline;
+			}
+        </style>
+        
+        <script>
+        	function validate()
+        	{
+        		var name = document.forms["contact"]["name"].value;
+    			var email = document.forms["contact"]["email"].value;
+    			var radio1 = document.forms["contact"]["c1"].value;
+    			var radio2 = document.forms["contact"]["c2"].value;
+    			if(name == "" || typeof(name) != 'string')
+    			{
+    				alert("Name must be filled in with a string value.");
+    				document.forms["contact"]["name"].focus();
+    				return false;
+    			}
+    			if(email == "" || typeof(email) != 'string')
+    			{
+    				alert("Email must be filled in with a valid email address.");
+    				document.forms["contact"]["email"].focus();
+    				return false;
+    			}
+    			if(radio1 == "" && radio2 == "")
+    			{
+    				alert("Please choose a radio button");
+    				document.forms["contact"]["c1"].focus();
+    				return false;
+    			}
+        		alert("Your Enquiry has Been Recorded. Thank You for Contacting Us.");
+        		resetForm();
+        		return false;
+        	}
+        	function resetForm()
+        	{
+        		document.forms["contact"]["name"].value = "";
+        		document.forms["contact"]["email"].value = "";
+        		document.forms["contact"]["phone"].value = "";
+        		document.getElementById("purpose").options[0].selected = "selected";
+        		document.forms["contact"]["info"].value = "";
+        		document.getElementById("c1").checked = false;
+        		document.getElementById("c2").checked = false;
+        		var inputs = document.forms["contact"].getElementsByTagName('input');
+        		for(var i = 0; i < inputs.length; i++)
+        		{
+        			if(inputs[i].type == "checkbox")
+        			{
+        				inputs[i].checked = false;
+        			}
+        		}
+        		return false;
+        	}
+        </script>
+        <noscript>
+        	<div style="color: red; font-weight: bold;">This page is best when used with Javascript!</div>
+        </noscript>
+        
+    </head> 
+    
+    <body>
+        <header class="jumbotron">
+            <h1>Nicky G's Tasty Teas</h1>
+            <h4>New Location Opening!</h4>
+        </header>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    	
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<div class="container">
+        	<nav class="nav nav-tabs">
+        		<a href="RestaurantHome.html" class="nav-item nav-link"><svg class="home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"/></svg> Home</a>
+        		<a href="RestaurantMenu.html" class="nav-item nav-link">Menu</a>
+        		<a href="RestaurantContact.html" class="nav-item nav-link current">Contact Us</a>
+        		<div class="clear-float"></div>
+        	</nav>
+			<div class="space"></div>
+			<p class="note">Required Items are Bolded</p>
+			<form name="contact" onsubmit="return validate()">
+				<label for="name" class="required">Name: </label>
+				<input type="text" id="name" name="name" required><br/>
+				<label for="email" class="required">Email: </label>
+				<input type="email" id="email" name="email" required><br/>
+				<label for="phone">Phone Number: </label>
+				<input type="tel" id="phone" name="phone"><br/>
+				<label for="purpose" class="required">Reason for Inquiry: </label>
+				<select id="purpose" name="purpose" required>
+					<option value="catering" selected>Catering</option>
+					<option value="privparty">Private Party</option>
+					<option value="feedback">Feedback</option>
+					<option value="other">Other</option>
+				</select><br/>
+				<label for="info">Additional Information: </label>
+				<textarea id="info" name="info"></textarea><br/>
+				<label for="rad" class="required">Have you been here before?</label>
+				<div id="rad" name="rad">
+					<input type="radio" id="c1" name="return" value="yes" required>
+					<label for="c1">Yes</label>
+					<input type="radio" id="c2" name="return" value="no" required>
+					<label for="c2">No</label><br/>
+				</div>
+				<label for="days">Best days to contact you: </label>
+				<div id="days" name="days">
+					<input type="checkbox" id="monday" name="day" value="monday">
+					<label for="monday">M</label>
+					<input type="checkbox" id="tuesday" name="day" value="tuesday">
+					<label for="tuesday">Tu</label>
+					<input type="checkbox" id="wednesday" name="day" value="wednesday">
+					<label for="wednesday">W</label>
+					<input type="checkbox" id="thursday" name="day" value="thursday">
+					<label for="thursday">Th</label>
+					<input type="checkbox" id="friday" name="day" value="friday">
+					<label for="friday">F</label><br/>
+				</div>
+				<input class="submit" type="submit" name="submit" value="Send Request">
+			</form>
+		
+		</div>
+		
+        <footer>
+			<hr/>
+			<p>Address: 397 Main street, Altdorf MN, 55019</p>
+			<p>Telephone: (608) 358-5732</p>
+        </footer>
+    </body> 
+</html>
